@@ -35,7 +35,11 @@ module.exports = {
   output: {
     filename: 'xterm.js',
     path: path.resolve('./lib'),
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    globalObject: 'this'
   },
-  mode: 'production'
+  mode: 'production',
+  optimization: {
+    minimize: false
+  }
 };
